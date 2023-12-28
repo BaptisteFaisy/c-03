@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfaisy <bfaisy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/28 15:14:29 by bfaisy            #+#    #+#             */
-/*   Updated: 2023/12/28 18:34:39 by bfaisy           ###   ########.fr       */
+/*   Created: 2023/12/28 18:17:26 by bfaisy            #+#    #+#             */
+/*   Updated: 2023/12/28 18:27:16 by bfaisy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include <cstdlib>
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-int main(void)
+#include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
 {
-	ScavTrap scavtrap("David");
+public :
+	FragTrap();
+	FragTrap(std::string name1);
 
-	scavtrap.debug();
-	scavtrap.beRepaired(10);
-	scavtrap.debug();
-	scavtrap.attack("Homer");
-}
+	FragTrap(const FragTrap& other);
+	FragTrap &operator=(const FragTrap& other);
+	~FragTrap();
+
+	void highFivesGuys();
+};
+
+#endif

@@ -6,16 +6,16 @@
 /*   By: bfaisy <bfaisy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 15:14:57 by bfaisy            #+#    #+#             */
-/*   Updated: 2023/12/28 18:15:43 by bfaisy           ###   ########.fr       */
+/*   Updated: 2023/12/28 18:16:35 by bfaisy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() : health(100), Energy_points(50), Attack_damage(20), name("Robot") {std::cout << "ClapTrap contsructor called\n";}
+ClapTrap::ClapTrap() : health(100), Energy_points(100), Attack_damage(30), name("Robot") {std::cout << "ClapTrap contsructor called\n";}
 
-ClapTrap::ClapTrap (std::string name1) : name(name1), health(100), Energy_points(50), Attack_damage(20){}
+ClapTrap::ClapTrap (std::string name1) : name(name1), health(100), Energy_points(100), Attack_damage(30){}
 ClapTrap::ClapTrap(const ClapTrap& other) : health(other.health), Energy_points(other.Energy_points), Attack_damage(other.Attack_damage){}
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other){

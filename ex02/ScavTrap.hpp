@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bfaisy <bfaisy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/28 15:14:29 by bfaisy            #+#    #+#             */
-/*   Updated: 2023/12/28 18:34:39 by bfaisy           ###   ########.fr       */
+/*   Created: 2023/12/28 17:03:26 by bfaisy            #+#    #+#             */
+/*   Updated: 2023/12/28 18:04:59 by bfaisy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
-#include <cstdlib>
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-int main(void)
+#include "ClapTrap.hpp"
+
+class ScavTrap : public ClapTrap
 {
-	ScavTrap scavtrap("David");
+public :
+	ScavTrap();
+	ScavTrap(std::string name);
+	
+	ScavTrap(const ScavTrap& other);
 
-	scavtrap.debug();
-	scavtrap.beRepaired(10);
-	scavtrap.debug();
-	scavtrap.attack("Homer");
-}
+	ScavTrap &operator=(const ScavTrap& other);
+	~ScavTrap();
+
+	void guardGate();
+	void attack(const std::string& target);
+};
+
+#endif
