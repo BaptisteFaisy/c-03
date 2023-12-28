@@ -6,7 +6,7 @@
 /*   By: bfaisy <bfaisy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 15:14:46 by bfaisy            #+#    #+#             */
-/*   Updated: 2023/12/28 17:24:13 by bfaisy           ###   ########.fr       */
+/*   Updated: 2023/12/28 17:50:43 by bfaisy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 class ClapTrap
 {
-private :
+protected :
 	std::string name;
 	int health;
 	int Energy_points ;

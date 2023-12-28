@@ -1,7 +1,7 @@
-NAME = ClapTrap
+NAME = ScavTrap
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g
-SRCS = main.cpp ClapTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 # SRCS = $(addprefix $(DIR)/,$(SRCS_RAW))
 OBJS = $(SRCS:c=o)
 # DIR = srcs

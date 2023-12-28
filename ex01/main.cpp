@@ -6,21 +6,19 @@
 /*   By: bfaisy <bfaisy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 15:14:29 by bfaisy            #+#    #+#             */
-/*   Updated: 2023/12/28 17:22:07 by bfaisy           ###   ########.fr       */
+/*   Updated: 2023/12/28 18:06:19 by bfaisy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <cstdlib>
 
 int main(void)
 {
-	ClapTrap claptrap("Test");
-	ClapTrap cpy;
+	ScavTrap scavtrap;
 
-	cpy = claptrap;
-	claptrap.attack(cpy.getname());
-	claptrap.takeDamage(8);
-	claptrap.beRepaired(10);
-	claptrap.debug();
+	scavtrap.debug();
+	scavtrap.beRepaired(10);
+	scavtrap.debug();
+	scavtrap.attack("David");
 }
